@@ -39,7 +39,6 @@ class _StudentProfileScreenState extends State<StudentProfileScreen> {
     'Hufflepuff'
   ];
 
-  // Material Date Picker
   Future<void> _selectMaterialDate(BuildContext context) async {
     final DateTime? picked = await showDatePicker(
       context: context,
@@ -54,7 +53,6 @@ class _StudentProfileScreenState extends State<StudentProfileScreen> {
     }
   }
 
-  // Cupertino Date Picker (Modal Sheet)
   void _showCupertinoDatePicker(BuildContext context) {
     showCupertinoModalPopup(
       context: context,
@@ -83,7 +81,6 @@ class _StudentProfileScreenState extends State<StudentProfileScreen> {
     );
   }
 
-  // Cupertino House Wheel Picker
   void _showCupertinoHousePicker(BuildContext context) {
     showCupertinoModalPopup(
       context: context,
@@ -133,7 +130,6 @@ class _StudentProfileScreenState extends State<StudentProfileScreen> {
     );
   }
 
-  // 竖屏布局
   Widget _buildPortraitView() {
     return ListView(
       padding: const EdgeInsets.all(16.0),
@@ -153,7 +149,6 @@ class _StudentProfileScreenState extends State<StudentProfileScreen> {
     );
   }
 
-  // 横屏布局
   Widget _buildLandscapeView() {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -186,7 +181,6 @@ class _StudentProfileScreenState extends State<StudentProfileScreen> {
     );
   }
 
-  // Interactive Pickers 区域
   Widget _buildPickerCard() {
     String dateStr =
         "${_selectedDate.year}-${_selectedDate.month.toString().padLeft(2, '0')}-${_selectedDate.day.toString().padLeft(2, '0')}";
@@ -251,7 +245,6 @@ class _StudentProfileScreenState extends State<StudentProfileScreen> {
   }
 }
 
-// 模块一：学生信息卡片 (来自 Lab 01)
 class StudentCardSection extends StatelessWidget {
   const StudentCardSection({super.key});
 
@@ -299,7 +292,6 @@ class StudentCardSection extends StatelessWidget {
   }
 }
 
-// 模块二：Title Section (包含 Location Details 与 星级评分)
 class TitleSection extends StatelessWidget {
   final String name;
   final String location;
@@ -357,7 +349,6 @@ class TitleSection extends StatelessWidget {
   }
 }
 
-// 模块三：图片 Section
 class ImageSection extends StatelessWidget {
   final String imagePath;
 
